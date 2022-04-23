@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+
+
+body {
+    /* height: 100vh; */
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat','Montserrat Alternates', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: #24A19C;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+nav ul  {
+    display: flex;
+}
+
+nav li {
+    display: block;
+    padding: 0 10px;
+}
+
+header .nav-brand {
+    color: white;
+    font-weight: bolder;
+    margin-top: 18px;
+}
+
+header ul li a {
+    font-family: 'Montserrat Alternates', sans-serif;
+    cursor: pointer;
+    color: #FFFCDC;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 255, 255);
+    transition: ease-in-out 0.3s;
+}
+
+#main-screen {
+    padding: 1rem;
+    background-color: rgb(248, 248, 248);
+}
+
+.card-intro {
+    padding: 5%;
+    line-height: 40px;
+}
+
+#features {
+    text-align: center;
+    padding: 7% 15%;
+    background: #35589A;
+    margin: 0 auto;
+}
+
+#features h3 {
+    font-weight: bolder;
+    color: white;
+    margin-bottom: -10px;
+}
+
+.feature-card ul {
+    width: 100%;
+    padding: 2%;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.feature-card li {
+    padding: 10%;
+    text-align: center;
+}
+
+.feature-card h5 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #466fb6;
+}
+
+footer {
+    height: 150px;
+    overflow: hidden;
+    background: #24A19C;
+    padding: 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+}
+
+.copyrights .h5, .contact .h5 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+}
+
+.copyrights .h5:hover, .contact .h5:hover {
+    color: white;
+    cursor: default;
+}
+
+.copyrights li, .contact li {
+    color: rgb(233, 233, 233);
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.copyrights li a, .contact li a {
+    cursor: pointer;
+    text-decoration: underline;
+    font-stretch: ultra-expanded;
+}
+
+.copyrights li a:hover, .contact li a:hover {
+    color: yellow;
+}
+
+/* 
+.month-form {
+    width: 50%;
+    min-height: 70px;
+    background-color: #F5F5F5;
+    padding: 20px;
+    margin: 40px 0px 60px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px 2px #00000085;
+} */
+
+/* .btn {
+    background-color: #325288;
+    color: white;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-left: 70px;
+} */
+
+/* .btn:hover {
+    cursor: pointer;
+    background-color: #466fb6;
+    transition: ease-in-out 0.3s;
+}
+
+select {
+    font-size: 20px;
+    outline: none;
+    border: 1px solid #24A19C;
+    margin-left: 10px;
+} */
+
+/* .error {
+    padding: 20px;
+    color: rgb(214, 122, 106);
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+} */
+
+/* EDITOR.HTML */
+
+#main-editor {
+    width: 60%;
+    min-height: 100vh;
+    margin-bottom: 25rem;
+}
+
+.editor {
+    /* border: 1px solid black; */
+    padding: 14px 28px;
+    margin-left: 20rem;
+    box-shadow: 0px 4px 10px 2px #00000085;
+}
+
+.editor input {
+    width: 150px;
+    padding: 1px;
+    outline: none;
+    border: 1px solid #24A19C;
+    border-radius: 5px;
+}
+
+.editor input:focus {
+    background: rgb(250, 249, 249);
+    transition: ease-in-out 0.4s;
+}
+
+.main1, .main3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    margin-right: 10px;
+}
+
+.main3 label {
+    margin-top: 10px;
+}
+
+.break-point1, .break-point2 {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.break-point1 input, .break-point2 input {
+    margin-right: 10px;
+}
+
+.hall {
+    display: flex;
+    flex-direction: row;
+}
+
+.break-point2 h3 {
+    flex-direction: row;
+}
+
+.submit {
+    text-align: right;
+    padding: 5%;
+}

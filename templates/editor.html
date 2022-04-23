@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+{% block title %}
+<link rel="stylesheet" href="{{ url_for('static', filename='/main.css') }}">
+<title>NWB Schedule Generator</title>
+{% endblock %}
+{% block content %}
+
+<section id="main-editor">
+    {% for d in data %}
+    <form class="editor" action="">
+        <h2 style="margin-top: 20px;">{{ d.json_nwb["month"] }}</h2>
+        <hr style="margin-bottom: 20px;padding: 2%; background-color: black;">
+        <div class="main1">
+            <label for="">Chairman <br>
+                <input type="text" name="chairman-{{ d.id }}">
+            </label>
+            <label for="">Opening Prayer <br>
+                <input type="text" name="opening-prayer-{{ d.id }}">
+            </label>
+            <label for="">Fine-Fine Lesson From Bible <br>
+                <input type="text" name="chairman-{{ d.id }}">
+            </label>
+            <label for="">Fine-Fine Things You See For Inside Bible <br>
+                <input type="text" name="ffbible-{{ d.id }}">
+            </label>
+            <h3>BIBLE READING</h3>
+            <div class="break-point1">
+                <label for="">Main Hall <br>
+                    <input type="text" name="br-main-{{ d.id }}">
+                </label>
+                <label for="">Second Hall <br>
+                    <input type="text" name="br-second-{{ d.id }}">
+                </label>
+            </div>
+            
+        </div>
+        <div class="main2">
+            <h3>DE USE ALL YOUR HEART PREACH</h3>
+            <div class="hall">
+                <h4>Main Hall(Student/Assistant)</h4>
+                <h4 style="margin-left: 53px;">Second Hall(Student/Assistant)</h4>
+            </div>
+            
+            {% for parts in d.json_nwb['preaching'] %}
+            <div class="break-point2">
+                <label for=""><br>
+                    <h5>{{ parts }}</h5>
+                    <input type="text" name="main-{{ parts }}">
+                </label>
+                <label for=""><br>
+                    <h5>{{ parts }}</h5>
+                    <input type="text" name="second-{{ parts }}">
+                </label>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="main3">
+            <h3>DE LIVE AS CHRISTIANS</h3>
+            {% for parts in d.json_nwb['middle_parts'] %}
+            <label for="">{{ parts }}<br>
+                <input type="text" name="live-{{ parts }}">
+            </label>
+            {% endfor %}
+            <label for="">Congregation Bible Study<br>
+                <input type="text" name="study-{{ d.id }}">
+            </label>
+            <label for="">Closing Prayer<br>
+                <input type="text" name="chairman-{{ d.id }}">
+            </label>
+        </div>
+        <div class="submit">
+            <button class="btn overide" type="submit">Generate</button>
+        </div>
+    </form>
+    {% endfor %}
+    
+</section>
+{% endblock %}
